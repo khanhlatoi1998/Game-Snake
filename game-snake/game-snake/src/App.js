@@ -32,9 +32,9 @@ function App() {
 	const [Diretion , setDiretion] = useState("RIGHT") ; 
 	
 	useEffect(() => {
-		
+		setInterval(moveSnake , 5000000) ; 
 		document.onkeydown = onKeydown ; 
-		moveSnake() ;
+	
 	} , [] ) ; 
 	
 	const onKeydown = (e) => {
@@ -62,7 +62,7 @@ function App() {
 			case "RIGHT" : 
 				head = [
 					{
-						left : "48%" , 
+						left : Number(head.left.slice(0,1)) + 2 + "%"  , 
 						top : "6%" , 
 					}
 				] ; 
@@ -70,7 +70,7 @@ function App() {
 			case "LEFT" : 
 				head = [
 					{
-						left : "4%" , 
+						left : Number(head.left.slice(0,1)) - 2 + "%", 
 						top : "4%" ,  
 					}
 				] ; 
@@ -79,7 +79,7 @@ function App() {
 				head = [
 					{
 						left : "4%" , 
-						top : "4%" ,  
+						top : Number(head.left.slice(0,1)) + 2 + "%",  
 					}
 				] ; 
 			break ;
@@ -87,7 +87,7 @@ function App() {
 				head = [
 					{
 						left : "4%" , 
-						top : "4%" ,  
+						top : Number(head.left.slice(0,1)) - 2 + "%" ,  
 					}
 				] ; 
 			break ;	
