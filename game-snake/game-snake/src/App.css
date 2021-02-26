@@ -1,0 +1,26 @@
+.Game-Snake {
+	width : 350px  ; 
+	height : 350px ; 
+	border : 2px solid black ; 
+	margin : 60px auto ; 
+	position : relative ;
+}
+
+.Snake-Dot {
+	width : 2% ; 
+	height : 2%  ;
+	background-color : black ; 
+	border : 1px solid white ; 
+	position : absolute ; 
+	z-index : 2 ;
+}
+
+.Food {
+	width : 2% ; 
+	height : 2%  ;
+	background-color : red ; 
+	border : 1px solid white ; 
+	position : absolute ; 
+	z-index : 3 ;
+}
+
